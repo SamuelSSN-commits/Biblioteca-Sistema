@@ -1,2 +1,5 @@
-# Biblioteca-Sistema
-Sistema de gestão de livros com Spring Boot
+<<<<<<< HEAD
+Conteúdo local
+=======
+Conteúdo do GitHub
+>>>>>>> abc123
