@@ -1,1 +1,5 @@
+/workspace/Biblioteca-Sistema/Biblioteca-sistema/src/main/java/com/biblioteca/Biblioteca_sistema/model/Livro.java
+/workspace/Biblioteca-Sistema/Biblioteca-sistema/src/main/java/com/biblioteca/Biblioteca_sistema/service/LivroService.java
 /workspace/Biblioteca-Sistema/Biblioteca-sistema/src/main/java/com/biblioteca/Biblioteca_sistema/BibliotecaSistemaApplication.java
+/workspace/Biblioteca-Sistema/Biblioteca-sistema/src/main/java/com/biblioteca/Biblioteca_sistema/controller/LivroController.java
+/workspace/Biblioteca-Sistema/Biblioteca-sistema/src/main/java/com/biblioteca/Biblioteca_sistema/repository/LivroRepository.java
