@@ -1,0 +1,5 @@
+com/biblioteca/Biblioteca_sistema/BibliotecaSistemaApplication.class
+com/biblioteca/Biblioteca_sistema/repository/LivroRepository.class
+com/biblioteca/Biblioteca_sistema/service/LivroService.class
+com/biblioteca/Biblioteca_sistema/controller/LivroController.class
+com/biblioteca/Biblioteca_sistema/model/Livro.class

@@ -1,6 +1,0 @@
-image: gitpod/workspace-java-17
-
-tasks:
-  - name: Build and Run
-    init: mvn clean install
-    command: mvn spring-boot:run
