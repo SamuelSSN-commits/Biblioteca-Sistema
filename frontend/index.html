@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Biblioteca Digital</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="inicio">
   <div class="container">
-    <h1>Bem-vindo à Biblioteca Digital</h1>
-    <div class="botoes">
-      <button class="btn">Cadastrar Livro</button>
-      <button class="btn">Listar Livros</button>
-      <button class="btn">Buscar Livro</button>
-    </div>
+    <h1 class="titulo">Biblioteca Digital</h1>
+    <img src="https://cdn.pixabay.com/photo/2017/02/01/22/02/book-2037501_1280.png" alt="Livros" class="img-principal" />
+    <button class="btn" onclick="entrar()">Entrar</button>
   </div>
+
+  <script>
+    function entrar() {
+      window.location.href = "biblioteca.html";
+    }
+  </script>
 </body>
 </html>
