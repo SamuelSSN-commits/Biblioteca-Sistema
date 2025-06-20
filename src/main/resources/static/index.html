@@ -1,24 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Biblioteca Digital</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
 </head>
-<body>
-  <div class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>📚 Biblioteca Digital</h1>
-      <p>Explore um mundo de conhecimento. Cadastre, busque e gerencie seus livros com facilidade.</p>
-      <div class="buttons">
-        <a href="#" class="btn btn-primary">Entrar</a>
-        <a href="#" class="btn btn-secondary">Saiba Mais</a>
-      </div>
-    </div>
-  </div>
+<body class="inicio">
+  <aside class="menu-lateral">
+    <h2>Menu</h2>
+    <ul>
+      <li onclick="mostrarSecao('inicio')">🏠 Início</li>
+      <li onclick="mostrarSecao('cadastro')">📝 Cadastrar Livro</li>
+      <li onclick="mostrarSecao('listar')">📚 Ver Livros</li>
+    </ul>
+  </aside>
+
+  <main class="conteudo">
+    <section id="inicio" class="secao ativa">
+      <h1 class="titulo">Biblioteca Digital</h1>
+      <img src="https://cdn-icons-png.flaticon.com/512/2991/2991102.png" class="icone" alt="Formatura"/>
+      <p class="sub">Bem-vindo! Gerencie, cadastre e consulte seus livros de forma prática.</p>
+    </section>
+
+    <section id="cadastro" class="secao">
+      <h2>Cadastro de Livro</h2>
+      <form id="formLivro">
+        <input type="text" id="titulo" placeholder="Título" required>
+        <input type="text" id="autor" placeholder="Autor" required>
+        <input type="text" id="isbn" placeholder="ISBN" required>
+        <input type="date" id="anoPublicacao" placeholder="Ano de Publicação" required>
+        <label><input type="checkbox" id="disponivel" checked> Disponível</label>
+        <button type="submit">Salvar</button>
+      </form>
+    </section>
+
+    <section id="listar" class="secao">
+      <h2>Livros Cadastrados</h2>
+      <ul id="listaLivros"></ul>
+    </section>
+  </main>
 </body>
 </html>

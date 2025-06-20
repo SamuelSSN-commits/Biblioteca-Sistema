@@ -1,93 +1,112 @@
-body {
+/* Reset */
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body.inicio {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794') no-repeat center center;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://media.giphy.com/media/fnV1qSzbGpKUsoNKxU/giphy.gif') no-repeat center center fixed;
   background-size: cover;
+  color: #f8f8f8;
+  min-height: 100vh;
 }
 
 .container {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(0, 0, 0, 0.6);
+  max-width: 700px;
+  margin: 80px auto;
   padding: 40px;
   border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
-}
-
-.img-principal {
-  width: 200px;
-  margin-bottom: 20px;
-}
-
-.titulo {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.btn {
-  background-color: #4CAF50;
-  color: white;
-  font-size: 1.2rem;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #388e3c;
-}
-
-body.sistema header {
-  background-color: #333;
-  color: white;
-  padding: 20px;
+  box-shadow: 0 0 10px #000;
   text-align: center;
 }
 
-nav button {
-  margin: 0 10px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  background-color: #4CAF50;
-  color: white;
-  cursor: pointer;
-  border-radius: 6px;
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #f3e5ab;
+  text-shadow: 1px 1px 2px #333;
 }
 
-nav button:hover {
-  background-color: #388e3c;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
 }
 
-main {
-  padding: 20px;
+label {
+  font-weight: 600;
+  color: #f8f8f8;
+  text-align: left;
 }
 
-input, button[type="submit"] {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
+input,
+select {
   padding: 10px;
-  font-size: 1rem;
-}
-
-ul#listaLivros {
-  list-style: none;
-  padding: 0;
-}
-
-ul#listaLivros li {
-  background-color: #e0f2f1;
-  margin-bottom: 8px;
-  padding: 12px;
+  border: none;
   border-radius: 6px;
+  font-size: 1em;
+}
+
+input[type="date"] {
+  cursor: pointer;
+}
+
+button {
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+hr {
+  margin: 30px 0;
+  border: 1px solid #777;
+}
+
+.book-list {
+  margin-top: 20px;
+  text-align: left;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.book-list ul {
+  list-style: none;
+}
+
+.book-list li {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.08);
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 0.95em;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  input,
+  select,
+  button {
+    font-size: 0.95em;
+  }
 }
