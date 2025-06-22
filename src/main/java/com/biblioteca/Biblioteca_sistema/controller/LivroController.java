@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/livros")
+@CrossOrigin(origins = "*") 
 public class LivroController {
 
     @Autowired
@@ -29,9 +30,13 @@ public class LivroController {
     }
 
     @PostMapping
-    public ResponseEntity<Livro> adicionarLivro(@Valid @RequestBody Livro livro) {
-        Livro salvo = livroService.save(livro);
-        return ResponseEntity.ok(salvo);
+    public ResponseEntity<?> adicionarLivro(@Valid @RequestBody Livro livro) {
+        try {
+            Livro salvo = livroService.save(livro);
+            return ResponseEntity.ok(salvo);
+        } catch (RuntimeException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 
     @PutMapping("/{id}")

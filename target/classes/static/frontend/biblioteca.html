@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sistema da Biblioteca</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="sistema">
+  <header>
+    <h1>📚 Sistema da Biblioteca Digital</h1>
+    <nav>
+      <button onclick="mostrarSecao('cadastro')">Cadastrar Livro</button>
+      <button onclick="listarLivros()">Ver Livros</button>
+      <button onclick="voltarInicio()">Sair</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="cadastro">
+      <h2>Cadastro de Livro</h2>
+      <form onsubmit="cadastrarLivro(event)">
+        <input type="text" id="titulo" placeholder="Título" required><br/>
+        <input type="text" id="autor" placeholder="Autor" required><br/>
+        <input type="text" id="isbn" placeholder="ISBN" required><br/>
+        <input type="number" id="ano" placeholder="Ano de Publicação" required><br/>
+        <label>
+          <input type="checkbox" id="disponivel" checked> Disponível
+        </label><br/>
+        <button type="submit">Salvar</button>
+      </form>
+    </section>
+
+    <section id="lista" style="display: none;">
+      <h2>Livros Cadastrados</h2>
+      <ul id="listaLivros"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
