@@ -83,6 +83,11 @@ src/main/resources/static
 ### 3. Acesso local
 Abra no navegador: [http://localhost:8081](http://localhost:8081)
 
+🔗 **Link temporário da aplicação:**  
+https://8081-samuelssnco-bibliotecas-xi9eivmb6pz.ws-us120.gitpod.io/
+
+⚠️ *Esse link é gerado pelo Gitpod e só funcionará enquanto o ambiente estiver ativo. Para testar, você pode rodar o projeto localmente ou hospedar o frontend em plataformas como Vercel ou GitHub Pages.*
+
 ---
 
 ## 🏠 Deploy (Render + Gitpod)
