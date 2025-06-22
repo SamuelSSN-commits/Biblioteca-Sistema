@@ -1,5 +1,7 @@
 # 📚 Biblioteca Virtual
 
+Este projeto foi desenvolvido como parte de uma atividade acadêmica da faculdade com o objetivo de criar um sistema CRUD completo (Create, Read, Update, Delete) para gerenciamento de livros em uma biblioteca digital.
+
 Sistema Web completo para gerenciamento de uma biblioteca digital.
 Desenvolvido com uma interface escura, moderna, interativa e animada,
 oferecendo ao estudante ou bibliotecário um ambiente ideal para cadastro,
