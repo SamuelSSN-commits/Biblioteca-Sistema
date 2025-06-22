@@ -1,8 +1,9 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  transition: all 0.3s ease-in-out;
 }
 
 body.inicio {
@@ -10,53 +11,59 @@ body.inicio {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url('https://i.pinimg.com/originals/40/1a/19/401a19b19570ed53add5cde4f6db393e.gif') no-repeat center center;
+  background: url('https://i.pinimg.com/originals/ed/07/71/ed077118e54eee299c09a940413374c6.gif') no-repeat center center;
   background-size: cover;
   cursor: url('https://cur.cursors-4u.net/cursors/cur-13/cur1164.cur'), auto;
 }
 
 .container {
-  background-color: rgba(255, 255, 255, 0.9);
+  background: rgba(30, 30, 30, 0.8);
+  backdrop-filter: blur(8px);
   padding: 40px;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
 }
 
 .titulo {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 20px;
+  color: #00ffc8;
+  text-shadow: 2px 2px 8px #000;
 }
 
 .btn {
-  background-color: #4CAF50;
-  color: white;
-  font-size: 1.2rem;
-  padding: 12px 24px;
+  background-color: #00ffc8;
+  color: #1a1a1a;
+  font-size: 1.3rem;
+  padding: 12px 30px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
 }
 
 .btn:hover {
-  background-color: #388e3c;
+  background-color: #00ccb0;
 }
 
 body.sistema {
-  background: url('https://i.pinimg.com/originals/52/64/6d/52646df3a26cd5696a1187b36b6fb095.gif') no-repeat center center;
+  background: url('https://i.pinimg.com/originals/0c/d5/ae/0cd5aebd953317d13f9b73c8f81b821d.gif') no-repeat center center;
   background-size: cover;
   color: #fff;
   cursor: url('https://cur.cursors-4u.net/cursors/cur-13/cur1164.cur'), auto;
 }
 
 body.sistema header {
-  backdrop-filter: blur(6px);
-  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 20px;
   text-align: center;
   border-radius: 12px;
-  margin: 10px;
+  margin: 10px auto;
+  max-width: 800px;
 }
 
 nav button {
@@ -64,23 +71,25 @@ nav button {
   padding: 10px 20px;
   font-size: 1rem;
   border: none;
-  background-color: #4CAF50;
-  color: white;
+  background-color: #00ffc8;
+  color: #1a1a1a;
   cursor: pointer;
   border-radius: 6px;
+  transition: 0.3s;
 }
 
 nav button:hover {
-  background-color: #388e3c;
+  background-color: #00ccb0;
 }
 
 main {
   padding: 20px;
-  backdrop-filter: blur(4px);
-  background-color: rgba(255,255,255,0.2);
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 12px;
-  max-width: 600px;
+  max-width: 700px;
   margin: auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
 }
 
 input, button[type="submit"] {
@@ -89,6 +98,14 @@ input, button[type="submit"] {
   margin-bottom: 10px;
   padding: 10px;
   font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #333;
+  color: #fff;
+}
+
+input::placeholder {
+  color: #aaa;
 }
 
 ul#listaLivros {
@@ -97,23 +114,31 @@ ul#listaLivros {
 }
 
 ul#listaLivros li {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.1);
   margin-bottom: 8px;
   padding: 12px;
   border-radius: 6px;
-  color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+ul#listaLivros li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .btn-deletar {
-  margin-left: 10px;
-  background-color: #e53935;
+  background-color: #ff5252;
   color: white;
   border: none;
-  border-radius: 5px;
   padding: 6px 10px;
+  border-radius: 4px;
   cursor: pointer;
+  font-size: 0.9rem;
 }
 
 .btn-deletar:hover {
-  background-color: #c62828;
+  background-color: #e53935;
 }
