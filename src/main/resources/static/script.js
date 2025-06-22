@@ -64,12 +64,36 @@ async function listarLivros() {
 
     livros.forEach(livro => {
       const li = document.createElement("li");
-      li.textContent = `📘 ${livro.titulo} - ${livro.autor} (${livro.anoPublicacao}) - ISBN: ${livro.isbn}`;
+      li.innerHTML = `
+        📘 <strong>${livro.titulo}</strong> - ${livro.autor} (${livro.anoPublicacao}) - ISBN: ${livro.isbn}
+        <button onclick="deletarLivro(${livro.id})" class="btn-deletar">🗑 Deletar</button>
+      `;
       lista.appendChild(li);
     });
 
   } catch (erro) {
     alert("Erro ao buscar livros.");
+    console.error(erro);
+  }
+}
+
+async function deletarLivro(id) {
+  const confirmar = confirm("Tem certeza que deseja deletar este livro?");
+  if (!confirmar) return;
+
+  try {
+    const resposta = await fetch(`${apiBaseUrl}/${id}`, {
+      method: "DELETE"
+    });
+
+    if (resposta.ok) {
+      alert("Livro deletado com sucesso!");
+      listarLivros();
+    } else {
+      alert("Erro ao deletar o livro.");
+    }
+  } catch (erro) {
+    alert("Erro ao conectar com o backend.");
     console.error(erro);
   }
 }

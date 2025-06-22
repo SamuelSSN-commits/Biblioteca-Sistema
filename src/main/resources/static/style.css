@@ -12,14 +12,15 @@ body.inicio {
   height: 100vh;
   background: url('https://i.pinimg.com/originals/40/1a/19/401a19b19570ed53add5cde4f6db393e.gif') no-repeat center center;
   background-size: cover;
+  cursor: url('https://cur.cursors-4u.net/cursors/cur-13/cur1164.cur'), auto;
 }
 
 .container {
-  background-color: rgb(255, 243, 243);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 40px;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.788);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
 .titulo {
@@ -45,12 +46,13 @@ body.sistema {
   background: url('https://i.pinimg.com/originals/52/64/6d/52646df3a26cd5696a1187b36b6fb095.gif') no-repeat center center;
   background-size: cover;
   color: #fff;
+  cursor: url('https://cur.cursors-4u.net/cursors/cur-13/cur1164.cur'), auto;
 }
 
 body.sistema header {
   backdrop-filter: blur(6px);
-  background-color: rgba(0, 0, 0, 0.281);
-  color: rgb(248, 243, 243);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
   padding: 20px;
   text-align: center;
   border-radius: 12px;
@@ -100,4 +102,18 @@ ul#listaLivros li {
   padding: 12px;
   border-radius: 6px;
   color: #000;
+}
+
+.btn-deletar {
+  margin-left: 10px;
+  background-color: #e53935;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.btn-deletar:hover {
+  background-color: #c62828;
 }
