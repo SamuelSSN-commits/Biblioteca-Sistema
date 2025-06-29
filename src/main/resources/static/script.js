@@ -1,4 +1,4 @@
-const apiBaseUrl = "https://8081-samuelssnco-bibliotecas-xi9eivmb6pz.ws-us120.gitpod.io/livros";
+const apiBaseUrl = "http://localhost:8081/livros";
 
 function mostrarSecao(secao) {
   document.getElementById("cadastro").style.display = secao === "cadastro" ? "block" : "none";
@@ -29,22 +29,24 @@ async function cadastrarLivro(event) {
       body: JSON.stringify(livro)
     });
 
+    const textoErro = await resposta.text();
+
     if (resposta.ok) {
       alert("Livro cadastrado com sucesso!");
       document.querySelector("form").reset();
     } else {
-      const erro = await resposta.text();
-      if (erro.includes("ISBN")) {
+      console.error("Erro na resposta do backend:", textoErro);
+      if (textoErro.includes("ISBN")) {
         alert("Erro: ISBN já cadastrado ou inválido.");
-      } else if (erro.includes("título")) {
+      } else if (textoErro.includes("título") || textoErro.includes("titulo")) {
         alert("Erro: Título inválido.");
       } else {
-        alert("Erro ao cadastrar livro.");
+        alert("Erro ao cadastrar livro.\n" + textoErro);
       }
     }
   } catch (erro) {
+    console.error("Erro ao conectar com o backend:", erro);
     alert("Erro ao conectar com o backend.");
-    console.error(erro);
   }
 }
 
@@ -72,8 +74,8 @@ async function listarLivros() {
     });
 
   } catch (erro) {
+    console.error("Erro ao buscar livros:", erro);
     alert("Erro ao buscar livros.");
-    console.error(erro);
   }
 }
 
@@ -90,10 +92,12 @@ async function deletarLivro(id) {
       alert("Livro deletado com sucesso!");
       listarLivros();
     } else {
+      const textoErro = await resposta.text();
+      console.error("Erro ao deletar:", textoErro);
       alert("Erro ao deletar o livro.");
     }
   } catch (erro) {
+    console.error("Erro ao conectar com o backend:", erro);
     alert("Erro ao conectar com o backend.");
-    console.error(erro);
   }
 }
